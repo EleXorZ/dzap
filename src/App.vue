@@ -1,9 +1,14 @@
 <script setup>
+import { ref } from 'vue'
+
+const count = ref(0)
 </script>
 
 <template>
   <div class="app">
-    <h1>Hello World</h1>
+    <h1>Bienvenue sur Dzap</h1>
+    <p>Projet Vue.js + Vite</p>
+    <button type="button" @click="count++">Compteur : {{ count }}</button>
   </div>
 </template>
 
@@ -14,8 +19,9 @@
   margin: 2rem auto;
   text-align: center;
 }
-h1 {
-  font-size: 2.5rem;
-  font-weight: 600;
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
 }
 </style>
